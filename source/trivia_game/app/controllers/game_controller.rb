@@ -15,11 +15,30 @@ require_relative '../views/game_view'
 class GameController
   def self.run
     GameView.show_menu
-
   end
 
   def self.start_game
+    @@uk = 0
+    @@us = 0
+    shuffled = Question.all.shuffle
+    shuffled.each do |question|
+      GameView.show_question(question)
+    end
+  end
 
+  def self.check_correctness(user_guess, description)
+    if user_guess == description.answer.downcase
+      puts "Good job!"
+      if description.answer == 'UK'
+        @@uk += 1
+        p @@uk
+      elsif description.answer == 'US'
+        @@us += 1
+        p @@us
+      end
+    else
+      puts "Too bad"
+    end
   end
 
   # def self.show_tasks

@@ -16,15 +16,21 @@ class GameView
     puts "Start - start the game"
     puts "Exit - exit the program"
     print "Enter your command here: "
-      input = gets.chomp
+      input = gets.chomp.downcase
       # return input.downcase
 
-     if input == "Start"
+     if input == "start"
       GameController.start_game
      elsif input == "Exit"
       exit_game
      end
 
+  end
+
+  def self.show_question(name)
+    puts name.question
+    input = gets.chomp.downcase # get user input
+    GameController.check_correctness(input, name)
   end
 
   def exit_game
