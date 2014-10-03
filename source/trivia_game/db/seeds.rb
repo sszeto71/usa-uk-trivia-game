@@ -12,7 +12,7 @@ class QuestionsImporter
     )
 
     Question.create(
-      question: "Which team generates the biggest revenues - The NFL NYGiants (US) or Manchester United(football) (UK)?",
+      question: "Who generates the most revenue - The NFL NYGiants (US) or Manchester United(football) (UK)?",
       answer: "UK"
     )
 
@@ -21,7 +21,7 @@ class QuestionsImporter
       answer: "UK"
     )
     Question.create(
-      question: "Which song stayed at number 1 the longest - 'Hey Jude' by the Beatles (UK) vs 'Heartbreak Hotel' by Elvis Presley (US)",
+      question: "Which stayed at number 1 the longest - 'Hey Jude' by the Beatles (UK) vs 'Heartbreak Hotel' by Elvis Presley (US)",
       answer:"UK"
     )
 

@@ -1,7 +1,6 @@
 require_relative 'config/application'
 require_relative 'app/controllers/game_controller'
 
-puts "Put your application code in #{File.expand_path(__FILE__)}"
 
 # Create a model class called Task
 # Create migration file for the task table

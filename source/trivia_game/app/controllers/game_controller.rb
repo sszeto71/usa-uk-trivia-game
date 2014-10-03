@@ -14,6 +14,16 @@ require_relative '../views/game_view'
 
 class GameController
   def self.run
+    # GameView.print_welcome
+    # puts ""
+    # GameView.print_to
+    # puts ""
+    # GameView.print_pants
+    # puts ""
+    # GameView.print_or
+    # puts ""
+    # GameView.print_trousers
+    # puts ""
     GameView.show_menu
   end
 
@@ -24,6 +34,7 @@ class GameController
     shuffled.each do |question|
       GameView.show_question(question)
     end
+    GameView.output_at_end(@@uk,@@us)
   end
 
   def self.check_correctness(user_guess, description)
@@ -31,30 +42,13 @@ class GameController
       puts "Good job!"
       if description.answer == 'UK'
         @@uk += 1
-        p @@uk
       elsif description.answer == 'US'
         @@us += 1
-        p @@us
       end
+    elsif user_guess != 'us' && user_guess != 'uk'
+      puts "There are literally only two possible answers and you blew it"
     else
-      puts "Too bad"
+      puts "Too bad!"
     end
   end
-
-  # def self.show_tasks
-  #   GameView.show_tasks
-  # end
-
-  # def self.add_task(task_description)
-  #   Question.create(description: task_description)
-  # end
-
-  # def self.delete_task(task_id)
-  #   Question.delete(task_id)
-  # end
-
-  # def self.complete_task(task_id)
-  #   task = Question.find(task_id)
-  #   task.update(complete: 'X')
-  # end
 end
