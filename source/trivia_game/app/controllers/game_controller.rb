@@ -1,7 +1,7 @@
 require_relative '../../config/application'
-require_relative '../views/task_view'
+require_relative '../views/game_view'
 
-class TaskController
+class GameController
   def self.run(command, argument)
     task = argument.join(" ")
 
@@ -17,19 +17,19 @@ class TaskController
   end
 
   def self.show_tasks
-    TaskView.show_tasks
+    GameView.show_tasks
   end
 
   def self.add_task(task_description)
-    Task.create(description: task_description)
+    Question.create(description: task_description)
   end
 
   def self.delete_task(task_id)
-    Task.delete(task_id)
+    Question.delete(task_id)
   end
 
   def self.complete_task(task_id)
-    task = Task.find(task_id)
+    task = Question.find(task_id)
     task.update(complete: 'X')
   end
 end

@@ -1,8 +1,8 @@
 require_relative '../../config/application'
 
-class TaskView
+class GameView
   def self.show_tasks
-    tasks = Task.all
+    tasks = Question.all
     # puts tasks
     tasks.each {|task| puts "#{task.id} [#{task.complete}] #{task.description}"}
   end

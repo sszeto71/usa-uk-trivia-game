@@ -1,5 +1,5 @@
 require_relative 'config/application'
-require_relative 'app/controllers/task_controller'
+require_relative 'app/controllers/game_controller'
 
 puts "Put your application code in #{File.expand_path(__FILE__)}"
 
@@ -8,5 +8,5 @@ puts "Put your application code in #{File.expand_path(__FILE__)}"
 # Create a controller file that will take the user input
 # pass the first ARGV value as command and rest of ARGV as the argument
 
-TaskController.run(ARGV.first, ARGV[1..-1])
+GameController.run(ARGV.first, ARGV[1..-1])
 
