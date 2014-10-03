@@ -21,7 +21,7 @@ class QuestionsImporter
       answer: "UK"
     )
     Question.create(
-      question: "Which stayed at number 1 the longest - 'Hey Jude' by the Beatles (UK) vs 'Heartbreak Hotel' by Elvis Presley (US)",
+      question: "What was #1 the longest - 'Hey Jude' by the Beatles (UK) vs 'Heartbreak Hotel' by Elvis Presley (US)",
       answer:"UK"
     )
 
